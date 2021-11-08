@@ -1,0 +1,90 @@
+package assignMent;
+import java.util.Scanner;
+public class Assignment1B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in) ;
+		int NoItems ;
+		System.out.println ("Enter the number of items : " );
+	    NoItems = sc.nextInt();
+		
+	    if (NoItems > 2 && NoItems <4) { // the condition is the number of items is 3 but no more than 3
+			double price1,price2,price3,total,disc;
+			int quan1, quan2 , quan3 ;
+			System.out.println ("Enter the price of first item : RM" );
+			price1 = sc.nextDouble();
+			System.out.println ("Enter the quantity of first item : " );
+			quan1 =sc.nextInt();
+			System.out.println ("Enter the price of second item : RM" );
+			price2 = sc.nextDouble();
+			System.out.println ("Enter the quantity of second item : RM" );
+			quan2 =sc.nextInt();
+			System.out.println ("Enter the price of third item : RM" );
+			price3 = sc.nextDouble();
+			System.out.println ("Enter the quantity of third item : " );
+			quan3 =sc.nextInt();
+			total = (price1*quan1) + (price2*quan2) + (price3*quan3);
+			System.out.println("Total Price : RM" + total);
+			if (total > 100 ) { // if total price is more than 100
+				disc = total * 0.2 ;
+				System.out.println ("discount received : RM" + disc );
+				total = total - disc;
+				System.out.println ("price to be paid : RM" + total);
+			}else {
+				disc = total * 0.1 ;
+				System.out.println ("discount received : RM" + disc );
+				total = total - disc;
+				System.out.println ("price to be paid : RM" + total);
+			}
+			
+		} else if(NoItems <3 && NoItems >1) { // condition for this number of item is 2 but not more than 1
+			double price1,price2,total,disc;
+			int quan1, quan2 ;
+			System.out.println ("Enter the price of first item : RM" );
+			price1 = sc.nextDouble();
+			System.out.println ("Enter the quantity of first item : " );
+			quan1 =sc.nextInt();
+			System.out.println ("Enter the price of second item : RM" );
+			price2 = sc.nextDouble();
+			System.out.println ("Enter the quantity of second item : " );
+			quan2 =sc.nextInt();
+			total = (price1*quan1) + (price2*quan2) ;
+			System.out.println("Total Price : RM" + total);
+			if (total > 100 ) {
+				disc = total * 0.2 ;
+				System.out.println ("discount received : RM" + disc );
+				total = total - disc;
+				System.out.println ("price to be paid : RM" + total);
+			}else {
+				disc = total * 0.1 ;
+				System.out.println ("discount received : RM" + disc );
+				total = total - disc;
+				System.out.println ("price to be paid : RM" + total);
+			}
+		} else if (NoItems == 1 ) { // the condition for this number of items is has to be one no more than that or low than that
+			double price1,total,disc;
+			int quan1;
+			System.out.println ("Enter the price of first item : RM" );
+			price1 = sc.nextDouble();
+			System.out.println ("Enter the quantity of first item : " );
+			quan1 =sc.nextInt();
+			total = (price1*quan1) ;
+			System.out.println("Total Price : RM" + total);
+			if (total > 100 ) {
+				disc = total * 0.2 ;
+				System.out.println ("discount received : RM" + disc );
+				total = total - disc;
+				System.out.println ("price to be paid : RM" + total);
+			}else {
+				disc = total * 0.1 ;
+				System.out.println ("discount received : RM" + disc );
+				total = total - disc;
+				System.out.println ("price to be paid : RM" + total);
+			}
+		}
+			
+	   
+	}
+
+}
